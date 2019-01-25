@@ -1,0 +1,94 @@
+/**
+ * Created For: 定义变量
+ * Author: chenLiYan.
+ * Date: 2017/12/14 16:34
+ */
+//主色调
+$color-black: #333;
+$color-black-light: #666;
+$color-black-lighter: #999;
+$color-orange:#ff6305;
+$color-orange-dark:#f66841;
+$color-blue:#1e9be5;
+$color-blue-hover:#1090dc;
+$color-green:#01915c;
+$color-red:#ff6305;
+$color-tip-red: #f56c6c;
+//背景
+$background-white: #fff;
+$background-blue-light: rgb(64, 158, 255);
+$background-blue: #1e9be5;
+$background-blue-dark: #1090dc;
+$background-gray: #f5f6f9;
+$background-light: #f2f2f2;
+//黑主题背景
+$background-black-light: #242f42;
+$background-black: #324157;
+//边框
+$border-color:#eee;
+$border-color-dark:#e3e3e3;
+$border-color-light:#f2f2f2;
+//element-ui边框颜色
+$border-color-el: #ebeef5;
+//字体大小
+$font-S: 12px;
+$font-M: 14px;
+$font-L: 16px;
+$font-B: 18px;
+//字体
+$font-family: "Microsoft YaHei", "Simsun", "Helvetica Neue", "Arial";
+
+//圆角边框
+@mixin border-radius ($topLeft: 4px, $topRight: 4px, $bottomRight: 4px, $bottomLeft: 4px) {
+  border-radius: $arguments;
+}
+@mixin all-radius ($radius: 4px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+//阴影
+@mixin box-shadow ($x: 0, $y: 0, $blur: 1px, $color: #000) {
+  box-shadow: $arguments;
+  -moz-box-shadow: $arguments;
+  -webkit-box-shadow: $arguments;
+}
+//转换
+@mixin transform ($rotate: 90deg, $scale: 1, $skew: 1deg, $translate: 10px) {
+  transform: rotate($rotate) scale($scale) skew($skew) translate($translate);
+}
+//过渡
+@mixin transition ($prop: all, $time: 1s, $ease: linear) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  -ms-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+//包裹
+@mixin content-wide($width:1100px) {
+  width: $width;
+  margin: 0 auto;
+  position: relative;
+}
+//超出省略
+@mixin ellipsis(){
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+// $direction（新）$orient（旧）排列顺序，
+@mixin flex($direction:row,$orient:horizontal){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: $orient;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+}

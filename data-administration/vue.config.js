@@ -18,6 +18,7 @@ module.exports = {
             }
         },
         open: true,   //热启动
+
     },
     publicPath:"/",
     productionSourceMap: process.env.NODE_ENV !=="production",
@@ -28,7 +29,7 @@ module.exports = {
     css:{
         loaderOptions:{
             sass:{
-                data:`@import "@/css/a.scss";`
+                data:`@import "@/css/common/base.scss";`
             }
         }
     },

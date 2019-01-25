@@ -25,7 +25,20 @@ module.exports = {
     chainWebpack: config=>{
         config.plugin('clean')
             .use(CleanPlugin, [['dist'], { root: '/dir' }]);
+        // config.module.rule(/\.scss$/).exclude.add('/\src/css/').end();
     },
+    // module: {
+    //     rules: [{
+    //         test: /\.scss$/,
+    //         use: [
+    //             // fallback to style-loader in development
+    //             process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+    //             "css-loader",
+    //             "sass-loader"
+    //         ]
+    //     }]
+    // },
+
     css:{
         loaderOptions:{
             sass:{

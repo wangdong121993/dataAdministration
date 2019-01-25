@@ -1,23 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import route from "./index"
+import storage from '../storage'
 Vue.use(Router);
 
-export default new Router({
+let router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
+    scrollBehavior(){
+        return {x: 0, y: 0}
+    },
     routes:
-        // [
-        //     {
-        //         path:"*",
-        //         name:"noFound",
-        //         component:resolve => require(['@/components/NotFound'], resolve)
-        //     },
-        //     {
-        //         path: '/',
-        //         name: 'container',
-        //         component: () => import(/* webpackChunkName: "about" */ '@/components/Container')
-        //     }
-        // ]
         route
-})
+});
+router.beforeEach((to, from , next)=>{
+    if(to.matched.some(record=>record.meta.noRequiresAuth)){
+        next();
+    }else{
+        if(storage.getters.isLogin){
+            next();
+        }else{
+            next({
+                name:"login"
+            })
+        }
+    }
+});
+
+
+export default router

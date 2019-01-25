@@ -4,6 +4,7 @@
  *Date:2019/1/24
 */
 @import "resetElementUI.scss";
+@import "./base.scss";
 body{
   background-color: #f30;
 }
@@ -71,7 +72,10 @@ input {
     overflow: hidden;
   }
 }
-// 面包屑
+.error{
+    color: $color-black;
+}
+/*面包屑*/
 .el-breadcrumb{
   padding-bottom: 10px;
   border-bottom: 1px solid $border-color;

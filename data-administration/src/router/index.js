@@ -8,8 +8,14 @@ import dataCount from "./modules/dataCount"
 export default [
     {
         path:"*",
-        name:"noFound",
-        component:resolve => require(['@/components/NotFound'], resolve)
+        name:"notFound",
+        // component:resolve => require(['@/components/NotFound'], resolve)
+        component:() => import(/* webpackChunkName: "noFound" */ '@/components/NotFound')
+    },
+    {
+        path:"/login",
+        name:"login",
+        component:() => import(/* webpackChunkName: "noFound" */ '@/views/login')
     },
     {
         path: '/',

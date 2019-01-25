@@ -52,7 +52,7 @@
                 </template>
             </template>
         </el-menu>
-        <div class="menu-hide" @click="menuCut()">{{collapse?'> >':`&gt; &gt;  收起`}}</div>
+        <div class="menu-hide" @click="menuCut()">{{collapse?'> >':`&lt; &lt;  收起`}}</div>
     </div>
 </template>
 

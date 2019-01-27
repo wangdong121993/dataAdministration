@@ -13,6 +13,6 @@
     }
 </script>
 
-<style>
-    @import "./css/common/common.scss";
+<style lang="scss">
+    @import "scss/common.scss";
 </style>

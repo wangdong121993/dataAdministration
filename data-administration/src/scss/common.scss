@@ -3,8 +3,8 @@
  *Author:wangdong
  *Date:2019/1/24
 */
-@import "resetElementUI.scss";
-@import "./base.scss";
+@import "base";
+@import "./common/resetElementUI.scss";
 body{
   background-color: #f30;
 }
@@ -19,7 +19,8 @@ html,body{
   height:100%;
 }
 body{
-  font:$font-M/1.5em "Helvetica Neue",Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+  font: 1.5em "Helvetica Neue",Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+  font-size: $font-M;
   min-width: 1360px;
   color: $color-black;
 }
@@ -73,7 +74,7 @@ input {
   }
 }
 .error{
-    color: $color-black;
+    color: $color-orange;
 }
 /*面包屑*/
 .el-breadcrumb{

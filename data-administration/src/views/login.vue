@@ -36,6 +36,7 @@
 </script>
 
 <style scoped lang="scss">
+    @import "../scss/login/login";
     .login-contain{
         width: 300px;
         height: 380px;

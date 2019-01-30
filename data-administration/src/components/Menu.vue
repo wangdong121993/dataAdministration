@@ -68,6 +68,41 @@
                 collapse: false,
                 items: [
                     {
+                        icon:"el-icon-edit-outline",
+                        index:"",
+                        title:"数据计算管理",
+                        auth:true,
+                        subs:[
+                            {
+                                index:"/dataCount/standardDataDeal",
+                                title:"基准数据处理",
+                                auth:true,
+                            },
+                            {
+                                index:"/dataCount/StandardDataLook",
+                                title:"基准数据查看",
+                                auth:true,
+                            },
+                            {
+                                index:"/dataCount/FlowDataDeal",
+                                title:"流向数据处理",
+                                auth:true,
+                            },{
+                                index:"/dataCount/FlowDataLook",
+                                title:"流向数据查看",
+                                auth:true,
+                            },{
+                                index:"/dataCount/ClassifyParameter",
+                                title:"分类特征参数",
+                                auth:true,
+                            },{
+                                index:"/dataCount/DataCaptureTask",
+                                title:"数据抓取任务",
+                                auth:true,
+                            }
+                        ]
+                    },
+                    {
                         icon: 'el-icon-bell',
                         index: 'promotionPrice',
                         title: '特价',
@@ -156,95 +191,6 @@
                             }
                         ]
                     },
-                    {
-                        icon: 'el-icon-picture',
-                        index: 'advertise',
-                        title: '广告',
-                        id: "",  // 对应后台数据
-                        auth: true,  //是否有权限
-                        subs: [
-                            {
-                                index: '/advertise/advertiseFloat',
-                                title: '浮层广告',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/advertise/advertiseTop',
-                                title: '头部广告',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/search/keyword',
-                                title: '搜索推广',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            }
-                        ]
-                    },
-                    // 厂家旗舰店
-                    {
-                        icon: 'el-icon-goods',
-                        index: 'factory',
-                        title: '厂家旗舰店',
-                        id: "",  // 对应后台数据
-                        auth: true,  //是否有权限
-                        subs: [
-                            {
-                                index: '/factory/pageManage',
-                                title: '页面管理',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            }
-                        ]
-                    },
-                    // 模块内容配置
-                    {
-                        icon: 'el-icon-setting',
-                        index: 'module',
-                        title: '模块内容配置',
-                        id: "",  // 对应后台数据
-                        auth: true,  //是否有权限
-                        subs: [
-                            {
-                                index: '/module/firstScreen/1/0/0',
-                                title: '首屏大图',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/module/floorAdvertise/1/0/0',
-                                title: '楼层广告',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/module/activityRecommend/1/0/0',
-                                title: '专题推荐',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/module/goodsRecommend/1/0/0',
-                                title: '商品推荐',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/module/standardItemRecommend',
-                                title: '标准商品推荐',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            },
-                            {
-                                index: '/module/video',
-                                title: '视频播放',
-                                id: "",  // 对应后台数据
-                                auth: true,  //是否有权限
-                            }
-                        ]
-                    }
                 ]
             }
         },

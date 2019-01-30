@@ -6,13 +6,16 @@
 <template>
     <div class="container">
         <v-menu></v-menu>
-        <div class="content-wrapper">
-            <v-header></v-header>
-            <keep-alive>
-            <router-view v-if="$route.meta.keepAlive"></router-view>
-            </keep-alive>
-            <router-view v-if="!$route.meta.keepAlive"></router-view>
-        </div>
+        <!--<div class="content-wrapper">-->
+            <el-main  class="content-wrapper">
+                <v-header></v-header>
+                <keep-alive>
+                    <router-view v-if="$route.meta.keepAlive"></router-view>
+                </keep-alive>
+                <router-view v-if="!$route.meta.keepAlive"></router-view>
+            </el-main>
+
+        <!--</div>-->
     </div>
 </template>
 

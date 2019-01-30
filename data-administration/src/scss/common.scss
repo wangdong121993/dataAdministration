@@ -73,6 +73,12 @@ input {
 .error{
     color: $color-orange;
 }
+.mt3{
+  margin-top: 3px !important;
+}
+.tc{
+  text-align: center;
+}
 /*面包屑*/
 .el-breadcrumb{
   padding-bottom: 10px;
@@ -83,3 +89,37 @@ input {
 .el-menu {
   border-right: 0;
 }
+/*顶部搜索样式*/
+.search-top{
+  position: relative;
+  margin: 10px 10px;
+  .clearfix{
+    margin-right: 10px;
+  }
+  .search-item{
+    width: 100%;
+    .el-form-item__content{
+      width: 100%;
+    }
+    .el-input{
+      width: 100%;
+    }
+  }
+  .search-top-button{
+    position: absolute;
+    right: 0;
+    top: 3px;
+  }
+}
+.search-con{
+  margin: 10px;
+  .cursor{
+    color: $color-blue;
+    cursor: pointer;
+  }
+  .pagination-wrapper{
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+.el-table-thead{ background-color: $background-gray !important;}

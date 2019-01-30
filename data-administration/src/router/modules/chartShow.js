@@ -4,7 +4,10 @@
  *Date:2019/1/24
  */
 export default {
-    path:"chartShow",
+    path:"/",
     name:"chartShow",
-    component: () => import(/* webpackChunkName: "about" */ '@/views/ChartShow/ChartShow')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/ChartShow/ChartShow'),
+    meta:{
+        title:"sca运营管理支撑系统"
+    }
 }

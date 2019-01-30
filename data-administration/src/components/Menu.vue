@@ -5,7 +5,7 @@
 */
 <template>
     <div class="menu">
-        <div class="logo">
+        <div class="logo" @click="goIndex()">
             <div class="" :style="'background-image:url('+(!collapse?img1:img2)+')'"></div>
             <!--<template v-if="collapse">-->
                 <!--<img src="../assets/logo-small.png" alt="">-->
@@ -257,6 +257,9 @@
         methods: {
             menuCut(){
                 this.collapse = !this.collapse;
+            },
+            goIndex(){
+                this.$router.replace({path:"/"});
             }
         }
     }
@@ -267,6 +270,7 @@
         width: 100%;
         height: 70px;
         transition: width 0.3s;
+        cursor: pointer;
         div{
             width: 100%;
             height: 100%;
@@ -276,9 +280,8 @@
     }
     .menu{
         min-height: 100%;
+        width: auto;
         background-color: #242f42;
-        float: left;
-        overflow: hidden;
         transition: 2s;
     }
     .menu-hide{

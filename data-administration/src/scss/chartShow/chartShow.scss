@@ -1,0 +1,103 @@
+/**
+ *Created For:sca运营管理支撑系统 图表管理
+ *Author:wangdong
+ *Date:2019/1/28
+*/
+.echarts-wrapper{
+  height: 100%;
+  .echarts{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .echarts-list{
+      width: 50%;
+      min-height: 400px;
+      box-sizing: border-box;
+      border: 5px solid #f2f2f2;
+      position: relative;
+      .title{
+        margin: 20px 0 0 20px;
+        line-height: 40px;
+        font-size: 18px;
+      }
+      /*基准数据分类*/
+      .base-content{
+        height: 220px;
+        margin: 0 0 20px;
+      }
+      .base-bottom{
+        display: flex;
+        align-items: center;
+        >div{
+          flex: 1;
+          text-align: center;
+          >div{
+            height: 110px;
+          }
+        }
+      }
+      /*流向数据匹配*/
+      &.echarts-match{
+        display: flex;
+        .match-left{
+          flex-grow: 1;
+          .matchData{
+            height: 220px;
+            margin: 0 0 20px;
+          }
+        }
+        .match-right{
+          width: 20%;
+          ul{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-left:5px solid #f2f2f2;
+            align-items: center;
+            justify-content: center;
+            li{
+              width: 100%;
+              flex: 1;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              border-bottom: 5px solid #f2f2f2;
+              p:first-child{
+                font-size: 18px;
+                font-weight: bold;
+              }
+              &:nth-child(1){
+                color: #9966CC;
+              }
+              &:nth-child(2){
+                color: #BDD9FC;
+              }
+              &:nth-child(3){
+                color: #00CCCC;
+              }
+              &:nth-child(4){
+                color: #CC3333;
+              }
+              &:last-child{
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+      /*终端数据统计*/
+      .terminalDataStatistics{
+        height: 320px;
+      }
+      /*流向数据统计*/
+      .screen-condition{
+        vertical-align: middle;
+      }
+      .screenCondition{
+        height: 250px;
+      }
+    }
+  }
+}

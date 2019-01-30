@@ -26,6 +26,10 @@ router.beforeEach((to, from , next)=>{
         }
     }
 });
-
+router.afterEach((to)=>{
+   if(to.meta.title){
+       document.title = to.meta.title+"-数据分析";
+   }
+});
 
 export default router

@@ -15,7 +15,10 @@ export default [
     {
         path:"/login",
         name:"login",
-        component:() => import(/* webpackChunkName: "noFound" */ '@/views/login')
+        component:() => import(/* webpackChunkName: "noFound" */ '@/views/login'),
+        meta:{
+            title:"系统登录"
+        }
     },
     {
         path: '/',

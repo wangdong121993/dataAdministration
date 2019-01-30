@@ -6,15 +6,21 @@
 <template>
     <div class="login">
         <div class="login-contain">
-            <div class="login-list">
-                <input type="text" placeholder="请输入账号">
-                <p class="error">账号不能为空</p>
+            <el-form :model="ruleName" :rules="rules" ref="ruleName">
+                <div class="login-list">
+                    <el-form-item prop="username">
+                        <el-input v-model="ruleName.username" placeholder="请输入用户名"></el-input>
+                    </el-form-item>
+                </div>
+                <div class="login-list">
+                    <el-form-item prop="username">
+                        <el-input v-model="ruleName.password" placeholder="请输入密码"></el-input>
+                    </el-form-item>
+                </div>
+            </el-form>
+            <div class="goBtn">
+                <el-button type="primary" class="login-btn" @click="btnSubmit()">登录</el-button>
             </div>
-            <div class="login-list">
-                <input type="text" placeholder="请输入密码">
-                <p class="error">密码不能为空</p>
-            </div>
-            <input type="button" value="登录">
         </div>
     </div>
 </template>
@@ -23,7 +29,18 @@
     export default {
         name: "",
         data() {
-            return {}
+            return {
+                ruleName:{
+                    username:"",
+                    password:"",
+                },
+                rules:{
+                    username:[
+                        {required:true,message:"请输入用户名",trigger: 'blur'}
+                    ],
+                    password: [{required: true, message: "请输入活动名称", trigger: "change"}]
+                }
+            }
         },
         watch: {},
         computed: {},
@@ -31,15 +48,24 @@
 
         },
         components: {},
-        methods: {}
+        methods: {
+            btnSubmit(){
+                this.$refs['ruleName'].validate(valid=>{
+                    if(valid){
+                        this.$router.replace({path:"/"});
+                    } else{
+                        return false;
+                    }
+                });
+            }
+        }
     }
 </script>
 
 <style scoped lang="scss">
-    @import "../scss/login/login";
     .login-contain{
         width: 300px;
-        height: 380px;
+        height: 220px;
         padding: 40px;
         background-color: #fff;
         position: absolute;
@@ -48,7 +74,7 @@
         transform: translate(-50%,-50%);
         border-radius: 10px;
         .login-list{
-            margin-top: 40px;
+            margin-bottom: 40px;
             input{
                 display: block;
                 border: 1px solid #f2f2f2;
@@ -59,6 +85,11 @@
                 box-sizing: border-box;;
             }
         }
-
+        .goBtn{
+            text-align: center;
+        }
+        .login-btn{
+            margin: 0 auto;
+        }
     }
 </style>

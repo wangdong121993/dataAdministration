@@ -6,8 +6,8 @@
 <template>
     <div class="container">
         <v-menu></v-menu>
-        <v-header></v-header>
         <div class="content-wrapper">
+            <v-header></v-header>
             <keep-alive>
             <router-view v-if="$route.meta.keepAlive"></router-view>
             </keep-alive>
@@ -38,9 +38,12 @@
     .container{
         width:100%;
         height: 100%;
+        display: flex;
+        flex: 1;
     }
     .content-wrapper{
-        min-height: 100%;
+        flex-grow:1;
+        min-height: calc(100vh - 70px);
         background-color: #fff;
     }
 </style>

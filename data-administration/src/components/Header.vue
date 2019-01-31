@@ -34,15 +34,15 @@
 
 <style scoped lang="scss">
     .header{
-        height: 70px;
-        background: #242f42;
-        color: #fff;
+        height:40px;
+        background: #fff;
+        color: #333;
         padding-right: 20px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
         .top-con{
-            color: #fff;
             font-size: 14px;
             cursor: pointer;
         }

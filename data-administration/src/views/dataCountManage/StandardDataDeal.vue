@@ -6,7 +6,7 @@
 <template>
     <div>
         <div class="search-top">
-            <time-query>
+            <time-query style="margin:0 10px;">
                 <template slot="before">
                     <el-col :span="4" class="clearfix">
                         <el-form-item class="search-item">
@@ -88,7 +88,6 @@
                 },
                 list:[
                     {
-                        checked: true,
                         batchNumber:20190102001,
                         source:"企查查",
                         remark:"药监局数据",
@@ -101,7 +100,6 @@
                         dealRate: "88%",
                     },
                     {
-                        checked: true,
                         batchNumber:20190102001,
                         source:"企查查",
                         remark:"药监局数据",

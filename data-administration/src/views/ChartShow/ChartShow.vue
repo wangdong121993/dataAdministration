@@ -59,7 +59,7 @@
                 <div class="screen-condition">
                     <time-query :dateType="timeOption.dateType" :timeValue="timeOption.timeValue">
                         <template slot="after">
-                            <el-select v-model="company" placeholder="企业" clearable style="margin-top: 2px;">
+                            <el-select v-model="company" placeholder="企业" clearable style="margin: 2px 10px 0 0;width: 190px;">
                                 <el-option
                                         v-for="item in list"
                                         :key="item.value"

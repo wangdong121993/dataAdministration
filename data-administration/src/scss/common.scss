@@ -92,7 +92,9 @@ input {
 /*顶部搜索样式*/
 .search-top{
   position: relative;
+  min-height: 52px;
   margin: 10px 10px;
+  padding-right: 20%;
   .clearfix{
     margin-right: 10px;
   }

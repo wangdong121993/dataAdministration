@@ -68,7 +68,11 @@
                 <el-table-column label="流向来源" prop="flowSource"></el-table-column>
                 <el-table-column label="流向时间" prop="flowTime" width="140"></el-table-column>
                 <el-table-column label="商业公司名" prop="businessCompany" width="120"></el-table-column>
-                <el-table-column label="省市区" prop="area" width="120"></el-table-column>
+                <el-table-column label="省市区" width="140">
+                    <template slot-scope="scope">
+                        <p class="">{{scope.row.area}}</p>
+                    </template>
+                </el-table-column>
                 <el-table-column label="业务分类" prop="taskClassify" width="140"></el-table-column>
                 <el-table-column label="数据类型" prop="dataType" width="80"></el-table-column>
                 <el-table-column label="终端名" prop="terminalName" width="80"></el-table-column>

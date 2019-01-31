@@ -5,6 +5,7 @@
  */
 import chartShow from "./modules/chartShow"
 import dataCount from "./modules/dataCount"
+import productData from "./modules/productData"
 export default [
     {
         path:"*",
@@ -26,7 +27,8 @@ export default [
         component: () => import(/* webpackChunkName: "about" */ '@/components/Container'),
         children:[
             chartShow,
-            dataCount
+            dataCount,
+            productData
         ]
     }
 ]

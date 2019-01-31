@@ -16,7 +16,6 @@
                 :unique-opened="true"
                 :router="true"
                 :collapse="collapse"
-                :background-color="'transparent'"
                 :text-color = "'#fff'"
         >
             <template v-for="item in items">
@@ -69,7 +68,7 @@
                 items: [
                     {
                         icon:"el-icon-edit-outline",
-                        index:"",
+                        index:"dataCount",
                         title:"数据计算管理",
                         auth:true,
                         subs:[
@@ -98,6 +97,37 @@
                             },{
                                 index:"/dataCount/DataCaptureTask",
                                 title:"数据抓取任务",
+                                auth:true,
+                            }
+                        ]
+                    },
+                    {
+                        icon:"el-icon-tickets",
+                        index:"productDataManage",
+                        title:"生产数据管理",
+                        auth:true,
+                        subs:[
+                            {
+                                index:"/productDataManage/AuthorityData",
+                                title:"官方数据",
+                                auth:true,
+                            },
+                            {
+                                index:"/productDataManage/StandardData",
+                                title:"基准数据",
+                                auth:true,
+                            },
+                            {
+                                index:"/productDataManage/FlowData",
+                                title:"流向数据",
+                                auth:true,
+                            },{
+                                index:"/productDataManage/BusinessCompany",
+                                title:"商业公司",
+                                auth:true,
+                            },{
+                                index:"/productDataManage/GoodsData",
+                                title:"商品数据",
                                 auth:true,
                             }
                         ]
@@ -235,6 +265,7 @@
         color: #fff;
         cursor: pointer;
         text-align: center;
+        background-color:#242f42;
     }
     .menu-hide:hover{
         background-color: #192129;

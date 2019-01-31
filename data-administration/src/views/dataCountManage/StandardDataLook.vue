@@ -7,7 +7,7 @@
     <div>
         <div class="search-top">
             <div class="search-con">
-                <el-form inline="true" :model="search">
+                <el-form inline :model="search">
                     <el-form-item style="width: 190px;">
                         <el-select placeholder="省" v-model="search.province" clearable>
                             <el-option v-for="p of area.province" :key="p.sid" :label="p.name" :value="p.sid"></el-option>

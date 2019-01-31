@@ -36,7 +36,7 @@
                 <el-table-column type="selection" width="55" fixed="left" ></el-table-column>
                 <el-table-column label="批次号" prop="batchNumber" width="120"></el-table-column>
                 <el-table-column label="来源" prop="source" width="120"></el-table-column>
-                <el-table-column label="备注" prop="remark"></el-table-column>
+                <el-table-column label="备注" prop="remark" width="120"></el-table-column>
                 <el-table-column label="导入时间" prop="importTime" width="140"></el-table-column>
                 <el-table-column label="类型" prop="type" width="120"></el-table-column>
                 <el-table-column label="状态" prop="status" width="120"></el-table-column>
@@ -74,6 +74,7 @@
 <script>
     /* eslint-disable */
     import timeQuery from "./../../components/TimeQuery"
+    import dataImport from "./../../components/DataImport"
     export default {
         name: "",
         data() {
@@ -124,7 +125,7 @@
         mounted() {
 
         },
-        components: {timeQuery},
+        components: {timeQuery,dataImport},
         methods: {
             handleSelectionChange(val){
                 console.log("选中的勾选",val);

@@ -4,6 +4,10 @@
  *Date:2019/1/24
 */
 //菜单重置
+.el-menu {
+  border-right: 0;
+  background-color:#242f42 !important;
+}
 .el-submenu:hover{
   background-color: #192129 !important;
   color: #00c1de !important;

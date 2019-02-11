@@ -5,8 +5,8 @@
 */
 <template>
     <div>
-        <el-dialog>
-
+        <el-dialog title="数据导入" :visible="dialog.visible">
+            hahahahha
         </el-dialog>
     </div>
 </template>
@@ -15,7 +15,11 @@
     export default {
         name: "",
         data() {
-            return {}
+            return {
+                dialog:{
+                    visible: true
+                }
+            }
         },
         watch: {},
         computed: {},
@@ -27,6 +31,6 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

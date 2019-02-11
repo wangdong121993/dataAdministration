@@ -68,6 +68,9 @@
                 </el-pagination>
             </div>
         </div>
+        <!--导入数据-->
+        <data-import></data-import>
+
     </div>
 </template>
 
